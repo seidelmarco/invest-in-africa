@@ -125,3 +125,6 @@ STATIC_ROOT = BASE_DIR / 'static' # is equal to os.path.join(BASE_DIR, 'static/'
 
 MEDIA_ROOT = BASE_DIR / 'media' # is equal to os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = '/'
+
