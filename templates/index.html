@@ -1,0 +1,169 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+
+<header><h1 class="herotitle">Investieren in die Neuen 20er</h1></header>
+
+<center><img src="{% static 'images/strand.jpg' %}" class="w3-round" alt="Strand in England" height="50%" width="50%"></center>
+
+<nav class="navigation">
+
+            <a href="{% url 'home' %}">Home | </a>
+
+            <div class="w3-dropdown-hover">
+            <a href="#" class="w3-button">Contemporary African Art and Poems | </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-2">
+            <a href="./africanpoems.html" class="w3-bar-item w3-button">Contemporary African Poems</a>
+            <a href="./africanpoems.html" class="w3-bar-item w3-button">Contemporary African Art</a>
+            </div>
+            </div>
+
+            <div class="w3-dropdown-hover">
+              <a href="#" class="w3-button">Quellen und Stats | </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-2">
+              <a href="https://ourworldindata.org" target="_blank" class="w3-bar-item w3-button">Our World in Data</a>
+              <a href="https://www.theguardian.com/uk" target="_blank" class="w3-bar-item w3-button">The Guardian</a>
+              <a href="https://www.washingtonpost.com" target="_blank" class="w3-bar-item w3-button">Washington Post</a>
+              <a href="https://trends.google.de/trends/explore?q=pandemie%20vorbereitung&geo=DE" target="_blank" class="w3-bar-item w3-button">Google Trends</a>
+            </div>
+            </div>
+
+            <div class="w3-dropdown-hover">
+            <a href="./tabellezse.html" class="w3-bar-item w3-button">Investieren in Afrika | </a>
+               <div class="w3-dropdown-content w3-bar-block w3-card-2">
+               <a href="http://deutsche-afrika-stiftung.de/files/afrikapost_aktuell_tetzlaff_03072020.pdf" target="_blank" class="w3-bar-item w3-button">10 Thesen für EZ mit Afrika</a>
+               <a href="./tabelleafrica50.html" target="_blank" class="w3-bar-item w3-button">Index Afrika Top 50</a>
+               <a href="#" class="w3-bar-item w3-button">Eingabeformular Africa 50</a>
+                   <a href="#" class="w3-bar-item w3-button">Formular - Investitionsprojekte/Business-Plans</a>
+               <a href="./tabellezse.html" class="w3-bar-item w3-button">allgemeine Marktdaten</a>
+               <a href="https://web.jse.co.za" target="_blank" class="w3-bar-item w3-button">JSE Equities</a>
+               <a href="http://www.nse.com.ng/market-data/trading-statistics/equities" target="_blank" class="w3-bar-item w3-button">NSE Equities</a>
+               <a href="https://www.zse.co.zw" target="_blank" class="w3-bar-item w3-button">ZSE</a>
+               <a href="https://www.dse.co.tz/dse/market-report" target="_blank" class="w3-bar-item w3-button">DSE Market Report</a>
+               </div>
+            </div>
+
+            <div class="w3-dropdown-hover">
+            <a href="#" class="w3-button">Neue 20er</a>
+              <div class="w3-dropdown-content w3-bar-block w3-card-2">
+               <a href="https://www.wikifolio.com/de/de/w/wf00new20s" target="_blank" class="w3-bar-item w3-button">Wikifolio Investieren Neue 20er</a>
+               <a href="./coronajournal.html" target="_blank" class="w3-bar-item w3-button">Corona-Tagebuch</a>
+              </div>
+            </div>
+
+        </nav>
+
+<div class="w3-row">
+     <div class="w3-col m4 l2">
+    <br />
+    <div class="w3-container w3-margin-right w3-light-white"> <!--12 columns on mobile, 3 bei 800x600, and 2 on a large screen.   -->
+    <br />
+    <div class="contenttable">
+    <ul>
+        <li>Projekt Hawaii</li>
+        <li>Investieren      <!-- Achtung, das schließende </li> Tag wird hier nicht notiert! -->
+          <ol>
+            <li>Investieren in Afrika</li>
+            <li>Investieren in die Neuen 20er</li>
+            <li>Die Blogeinträge nach der Category hier sortieren</li>
+          </ol>
+        </li>                <!-- Hier ist das schließende </li> Tag angegeben! -->
+    <li>Programmieren und KI</li>
+    </ul>
+    </div>
+    <br />
+    </div>
+    </div>
+
+    <div class="w3-col m4 l5"><br />
+     <div class="w3-container w3-margin-right w3-white"> <!--12 columns on mobile, 3 bei 800x600, and 2 on a large screen.   -->
+
+    {% for post in post_list %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <p class="card-text text-muted h6">{{ post.comments.count }} comments</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+
+    </div>
+     </div>
+     <div class="w3-col m4 l5">
+    <br />
+    <div class="w3-container w3-margin-right w3-white"> <!--12 columns on mobile, 3 bei 800x600, and 2 on a large screen.   -->
+
+
+    <h3>Afrikas Top 500 umsatzstärkste Unternehmen - Auswahl</h3><br />
+        <caption>Top 500 - Auswahl</caption>
+			<div class="table-responsive"> <!-- diese div gibt der Tabelle auf sehr kleinen Bildschirmen einen Rahmen und macht scrollbar; default ist knietschen bis es nicht mehr geht -->
+			<table class="table table-hover">
+				<thead>
+				  <tr>
+				    <th></th>
+				    <th>2019</th>
+					<th>2018</th>
+					<th>Veränderung</th>
+					<th>Marktkapitalisierung in Mio $</th>
+					<th>Volumen in Mio</th>
+					<th>Umsätze in Mio $</th>
+					<th>P/E Ratio</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+				    <td>Delta</td>
+					<td>511,17</td>
+					<td>510,02</td>
+					<td>0,23%</td>
+					<td>487,13</td>
+					<td>4,94%</td>
+					<td>20.000</td>
+					<td>3,51</td>
+				  </tr>
+				  <tr>
+				    <td>Econet</td>
+					<td>217,92</td>
+					<td>217,92</td>
+					<td>0,00%</td>
+					<td>227,71</td>
+					<td>(4,30%)</td>
+					<td>337</td>
+					<td> -   </td>
+				  </tr>
+				   <tr>
+				    <td>Innscor</td>
+					<td>151,36</td>
+					<td>151,59</td>
+					<td>(0,15%)</td>
+					<td>145,02</td>
+					<td>4,37%</td>
+					<td>15.768</td>
+					<td> 1,66 </td>
+				  </tr>
+				   <tr>
+				    <td>Naspers</td>
+					<td>153,24</td>
+					<td>152,9</td>
+					<td>0,22%</td>
+					<td>146,24</td>
+					<td>4,79%</td>
+					<td>20.338</td>
+					<td> 3,51 </td>
+				  </tr>
+
+				</tbody>
+			</table>
+      		<p><mark>Marktkommentar:</mark> man sieht sehr deutlich, der Markt ist nicht sehr liquide und die Umsätze nehmen sich im Gegensatz zu Deutschland und Nigeria bescheiden aus.</p>
+    	</div>
+    </div>
+    </div>
+</div>
+<!--Ende w3-content-container-->
+
+{% endblock %}

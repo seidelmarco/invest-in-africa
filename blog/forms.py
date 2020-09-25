@@ -1,17 +1,15 @@
+from .models import Comment, Post
 from django import forms
-
-from .models import Post, Comment
-
-
-class PostForm(forms.ModelForm):
-
-    class Meta:
-        model = Post
-        fields = ('title', 'text',)
 
 
 class CommentForm(forms.ModelForm):
-
     class Meta:
         model = Comment
-        fields = ('author', 'text',)
+        fields = ('name', 'email', 'body')
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('title', 'slug', 'content', 'status')
+

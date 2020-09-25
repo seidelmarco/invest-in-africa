@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          {% if user.is_authenticated %}
+          <a class="btn btn-default" href="{% url 'post_edit' slug=post.slug %}"><span>Edit Post</span></a>
+          {% endif %}
+          <h2>{% block title %} {{ post.title }} {% endblock title %}</h2>
+          <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+          <p class="card-text">{{ post.content | linebreaksbr | safe }}</p>  <!---template tag safe schützt gegen xsitescripting - also dass mir jemand mit seinem Blogeintrag skripte unterjubelt-->
+        </div>
+      </div>
+
+      <div class="col-md-8 card mb-4 mt-3">
+        <div class="card-body">
+          <!--Comments-->
+          <h2>{{ comments.count }} comments</h2>
+
+          {% for comment in comments %}
+          <div class="comments" style="padding: 10px;">
+            <p class="font-weight-bold">
+              {{ comment.name }}
+              <span class="text-muted font-weight-normal">
+                {{ comment.created_on }}
+              </span>
+            </p>
+            {{  comment.body | linebreaks }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-8 card mb-4 mt-3">
+        <div class="card-body">
+          {% if new_comment %}
+          <div class="alert alert-success" role="alert">Your comment is awaiting moderation.</div>
+          {% else %}
+          <h3>Leave a comment</h3>
+          <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col"></div>
+  </div>
+</div>
+
+{% endblock content %}
+
+
+

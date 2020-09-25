@@ -1,40 +1,47 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 # Dieses Projekt ist mit https://tutorial-extensions.djangogirls.org/en/homework_create_more_models/ Django-Girls Tutorial
-# Schritt - für - Schritt geschrieben
+# Schritt - für - Schritt geschrieben - und geblendet mit DjangoCentral.com - später folgt polls aus der Django doc
+
+STATUS = (
+    (0, "Draft"),
+    (1, "Publish")
+)
 
 
 class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE,related_name='blog_posts')
+    updated_on = models.DateTimeField(auto_now=True)
+    content = models.TextField()
+    category = models.CharField(max_length=200, null=True, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
+    class Meta:
+        ordering = ['-created_on']
 
     def __str__(self):
         return self.title
 
 
 class Comment(models.Model):
-    #The related_name option in models.ForeignKey allows us to have access to comments from within the Post model.
-    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
-    author = models.CharField(max_length=200)
-    text = models.TextField(max_length=1000, blank=False, editable=True)
-    created_date = models.DateTimeField(default=timezone.now)
-    approved_comment = models.BooleanField(default=False) #im Admin-Panel ist das eine leere (False) Checkbox
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
 
-    def approve(self):
-        self.approved_comment = True
-        self.save()
+    class Meta:
+        ordering = ['created_on']
 
     def __str__(self):
-        return self.text
-
+        return 'Comment {} by {}'.format(self.body, self.name)
