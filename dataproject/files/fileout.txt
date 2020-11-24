@@ -1,0 +1,4 @@
+If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful!
+If the file doesn’t exist, a new one is created.
+The write method of the file handle object puts data into the file, returning the number of characters
+written. The default write mode is text for writing (and reading) strings.

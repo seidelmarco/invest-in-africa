@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row" style="padding: 20px;">
+        {% if latest_question_list %}
+            <ul>
+            {% for question in latest_question_list %}      <!--Diese Schleife ist dafür verantwortlich, dass du dynamisch auf deiner Seite die gesamte Fragenliste siehst.-->
+                <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- backup für Ankerelement ohne Namespacing: /polls/-->

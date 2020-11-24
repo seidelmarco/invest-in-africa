@@ -11,8 +11,14 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    queryset = Post.objects.filter(status=1).order_by('-created_on')[:9]
     template_name = 'index.html'
+
+
+#@login_required()
+class PostDrafts(generic.ListView):
+    queryset = Post.objects.filter(status=0).order_by('-created_on')[:9]
+    template_name = 'post_drafts.html'
 
 
 #class PostDetail(generic.DetailView):
@@ -76,6 +82,11 @@ def post_edit(request, slug):
     else:
         form = PostForm(instance=post)
     return render(request, 'post_edit.html', {'form': form})
+
+
+
+
+
 
 
 

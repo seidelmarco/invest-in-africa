@@ -1,0 +1,183 @@
+Caledonia Mining Corporation Plc
+
+Notification of relevant change to significant shareholder
+
+(NYSE AMERICAN: CMCL; AIM: CMCL)
+
+October 9, 2020: Caledonia Mining Corporation Plc ("Caledonia" or the "Company") announces that it received notification on October 8, 2020, from BlackRock, Inc., which is a "significant shareholder" of the Company as defined by the AIM Rules for Companies, that it has increased its interest in the Company and on October 7, 2020 crossed a particular threshold for notification of its holdings in the Company. A copy of the notification is below.
+
+
+1: Standard form for notification of major holdings
+
+NOTIFICATION OF MAJOR HOLDINGS (to be sent to the relevant issuer and to the FCA in Microsoft Word format if possible)i
+
+1a. Identity of the issuer or the underlying issuer of existing shares to which voting rights are attachedii:
+Caledonia Mining Corporation Plc
+1b. Please indicate if the issuer is a non-UK issuer  (please mark with an "X" if appropriate)
+Non-UK issuer
+X
+2. Reason for the notification (please mark the appropriate box or boxes with an "X")
+An acquisition or disposal of voting rights
+X
+An acquisition or disposal of financial instruments
+
+An event changing the breakdown of voting rights
+
+Other (please specify)iii:
+
+3. Details of person subject to the notification obligationiv
+Name
+BlackRock, Inc.
+City and country of registered office (if applicable)
+Wilmington, DE, USA
+4. Full name of shareholder(s) (if different from 3.)v
+Name
+
+City and country of registered office (if applicable)
+
+5. Date on which the threshold was crossed or reachedvi:
+07/10/2020
+6. Date on which issuer notified (DD/MM/YYYY):
+08/10/2020
+7. Total positions of person(s) subject to the notification obligation
+
+% of voting rights attached to shares (total of 8. A)
+% of voting rights through financial instruments
+(total of 8.B 1 + 8.B 2)
+Total of both in % (8.A + 8.B)
+Total number of voting rights of issuervii
+Resulting situation on the date on which threshold was crossed or reached
+5.00%
+0.40%
+5.40%
+12,118,823
+Position of previous notification (if
+applicable)
+4.99%
+0.39%
+5.38%
+
+
+8. Notified details of the resulting situation on the date on which the threshold was crossed or reachedviii
+A: Voting rights attached to shares
+Class/type of
+shares
+ISIN code (if possible)
+Number of voting rightsix
+% of voting rights
+Direct
+(Art 9 of Directive 2004/109/EC) (DTR5.1)
+Indirect
+(Art 10 of Directive 2004/109/EC) (DTR5.2.1)
+Direct
+(Art 9 of Directive 2004/109/EC) (DTR5.1)
+Indirect
+(Art 10 of Directive 2004/109/EC) (DTR5.2.1)
+JE00BF0XVB15
+
+606,350
+
+5.00%
+
+
+
+
+
+
+
+
+
+
+SUBTOTAL 8. A
+606,350
+5.00%
+
+
+B 1: Financial Instruments according to Art. 13(1)(a) of Directive 2004/109/EC (DTR5.3.1.1 (a))
+Type of financial instrument
+Expiration
+datex
+Exercise/
+Conversion Periodxi
+Number of voting rights that may be acquired if the instrument is
+exercised/converted.
+% of voting rights
+Securities Lending
+
+
+16,100
+0.13%
+
+
+
+
+
+
+
+
+
+
+
+
+SUBTOTAL 8. B 1
+16,100
+0.13%
+
+
+
+
+
+
+B 2: Financial Instruments with similar economic effect according to Art. 13(1)(b) of Directive 2004/109/EC (DTR5.3.1.1 (b))
+Type of financial instrument
+Expiration
+datex
+Exercise/
+Conversion Period xi
+Physical or cash
+settlementxii
+Number of voting rights
+% of voting rights
+CFD
+
+
+Cash
+32,901
+0.27%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SUBTOTAL 8.B.2
+32,901
+0.27%
+
+
+
+
+9. Information in relation to the person subject to the notification obligation (please mark the
+applicable box with an "X")
+Person subject to the notification obligation is not controlled by any natural person or legal entity and does not control any other undertaking(s) holding directly or indirectly an interest in the (underlying) issuerxiii
+
+Full chain of controlled undertakings through which the voting rights and/or the
+financial instruments are effectively held starting with the ultimate controlling natural person or legal entityxiv (please add additional rows as necessary)
+X
+Namexv
+% of voting rights if it equals or is higher than the notifiable threshold
+% of voting rights through financial instruments if it equals or is higher than the notifiable threshold
+Total of both if it equals or is higher than the notifiable threshold
+See Attachment
+
+
+
