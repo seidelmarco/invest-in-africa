@@ -131,13 +131,15 @@ USE_TZ = True
 # http://127.0.0.1:8000/static/css/style.css basically think this as a reference to static files.
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = BASE_DIR / 'media' # is equal to os.path.join(BASE_DIR, 'media/')
+
+#MEDIA_ROOT = BASE_DIR / 'media' # is equal to os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Location of static file
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'), ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
