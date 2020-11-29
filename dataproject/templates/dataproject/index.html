@@ -13,8 +13,8 @@
     <script src="https://maps.google.cn/maps/api/js" type="text/javascript"></script> -->
 
     <!--<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="files/where.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaAVLQNGuvKmvjz0hLtogz0uE17sWnnFU"></script>
+    <script src="{% static 'where.js' %}"></script>
     <script>
 
       function initialize() {
@@ -51,16 +51,19 @@
       }
     </script>
   </head>
+
   <body onload="initialize()">
-<div id="map_canvas" style="height: 500px"></div>
-<p><b>About this Map</b></p>
-<p>
-This is a cool map from
-<a href="https://www.py4e.com">www.py4e.com</a>.
-</p><br>
-  <p>Hello, world. You're at the dataproject index. Hier werden in eine Liste/Tabelle aktuelle
-    Kursdaten über Websitescraping reingezogen. CRUD - create, read, update, delete of data.</p>
-</body>
+  <div class="container">
+    <div id="map_canvas" style="height: 500px"></div>
+    <p><b>About this Map</b></p>
+    <p>
+    This is a cool map from
+    <a href="https://www.py4e.com">www.py4e.com</a>.
+    </p><br>
+    <p>Hello, world. You're at the dataproject index. Hier werden in eine Liste/Tabelle aktuelle
+      Kursdaten über Websitescraping reingezogen. CRUD - create, read, update, delete of data.</p>
+  </div>
+  </body>
 </html>
 
 

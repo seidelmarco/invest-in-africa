@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
     'dataproject.apps.DataProjectConfig',
+    'africanart.apps.AfricanArtConfig',
     'polls.apps.PollsConfig',
     'crispy_forms',
 ]
@@ -135,8 +136,9 @@ MEDIA_URL = '/media/'
 
 
 # Location of static file
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'), ]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
