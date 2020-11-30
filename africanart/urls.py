@@ -7,3 +7,4 @@ app_name = 'africanart'
 urlpatterns = [
     path('', views.africanart, name='africanart'),
 ]
+

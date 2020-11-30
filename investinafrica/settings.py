@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'dataproject.apps.DataProjectConfig',
     'africanart.apps.AfricanArtConfig',
+    'africanpoems.apps.AfricanPoemsConfig',
     'polls.apps.PollsConfig',
     'crispy_forms',
 ]
