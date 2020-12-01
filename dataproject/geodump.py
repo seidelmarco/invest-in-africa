@@ -6,7 +6,7 @@ conn = sqlite3.connect('geodata.sqlite3')
 cur = conn.cursor()
 
 cur.execute('SELECT * FROM Locations')
-fhand = codecs.open('where.js', 'w', "utf-8")
+fhand = codecs.open('../../../Library/Application Support/JetBrains/PyCharmCE2020.1/scratches/where.js', 'w', "utf-8")
 fhand.write("myData = [\n")
 count = 0
 for row in cur:

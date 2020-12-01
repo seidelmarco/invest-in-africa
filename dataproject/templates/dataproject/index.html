@@ -19,11 +19,11 @@
 
       function initialize() {
         alert("To see the title of a marker, hover over the marker but don't click.");
-        var myLatlng = new google.maps.LatLng(37.39361,-122.099263)
+        var myLatlng = new google.maps.LatLng(-17.8249306, 31.0490431)
         var mapOptions = {
           zoom: 3,
           center: myLatlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.SATELLITE
         }
         var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 

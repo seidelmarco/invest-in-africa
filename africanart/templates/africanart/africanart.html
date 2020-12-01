@@ -4,19 +4,19 @@
 {% block content %}
 
 
-<header><h1 class="herotitle">By The Ghettoside</h1></header>
+<header><h1 class="herotitle">Ndiri Pano</h1></header>
 <center><header><h2>By: Amanda Badze</h2></header></center>
+<br />
+<div class="container">
+        <center>
+            <video width="530" height="440" controls autoplay src="{% static 'media/Ndiri_Pano_Exhibition_Invitation.mp4' %}">
+            </video>
+        </center>
+</div>
+<br />
 
-<center><img src="{% static 'images/Amanda.jpg' %}" class="w3-round" alt="Amanda Badze" height="50%" width="50%"></center>
+<center><img src="{% static 'images/ndiri_pano_poem.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%"></center>
 
-
-<center><p>I release my hated. Given to destruction, Creations's servant.</p></center>
-<center><p>New form is always natural, Allowed, Good, & Loved. </p></center>
-<center><p>That is because I desire to bow deeply. Swim eternally.</p></center>
-<center><p>Present, In the depths of appreciation. </p></center>
-<center><p>Oh So let it be known, as it is in Africa,</p></center>
-<center><p>That the value of The Continent's identity,</p></center>
-<center><p>Refuses to be known, until her ghetto is Felt.</p></center>
 <br />
 
 <!--
@@ -28,11 +28,68 @@
 -->
 
 
-<div class="container">
-        <center>
-            <video width="530" height="440" controls autoplay src="{% static 'media/BY_THE_GHETTOSIDE.mp4' %}">
-            </video>
-        </center>
+<center><img src="{% static 'images/Amanda.jpg' %}" class="w3-round" alt="Amanda Badze" height="30%" width="30%"></center>
+<br />
+<center><p>I release my hated. Given to destruction, Creations's servant.</p></center>
+<center><p>New form is always natural, Allowed, Good, & Loved. </p></center>
+<center><p>That is because I desire to bow deeply. Swim eternally.</p></center>
+<center><p>Present, In the depths of appreciation. </p></center>
+<center><p>Oh So let it be known, as it is in Africa,</p></center>
+<center><p>That the value of The Continent's identity,</p></center>
+<center><p>Refuses to be known, until her ghetto is Felt.</p></center>
+<br />
+
+<!--- Container Bildergalerie beginnen -->
+<div class="container-md">
+    <div class="row">
+        <div class="col-sm">
+        <!-- Content here -->
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/amanda_pics_7.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+        </div>
+    <!--<img src="{% static 'images/amanda_pics_7.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%">-->
+
+        <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/amanda_pics_8.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/amanda_pics_9.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        </div>
+        </div>
+    </div>
 </div>
+
+<div class="container-md">
+  <div class="row">
+  <!-- Content here -->
+
+    <img src="{% static 'images/amanda_pics_7.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%">
+    <img src="{% static 'images/amanda_pics_8.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%">
+    <img src="{% static 'images/amanda_pics_9.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%">
+    <img src="{% static 'images/amanda_pics_2.jpg' %}" class="w3-round" alt="Ndiri Pano" height="50%" width="50%">
+
+  </div>
+</div>
+
+
+
+
+<!---  Ende Container  -->
+
+
 
 {% endblock %}

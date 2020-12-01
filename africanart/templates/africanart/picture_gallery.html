@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture Gallery</title>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="jumbotron text-center">
+		<h1>Amanda</h1>
+		<p>Ndiri Pano</p>
+
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+			  <img src="{% static 'images/amanda_pics_1.jpg' %}" alt="" style="with:100%;">
+			</div>
+
+			 <div class="item 2">
+			  <img src="{% static 'images/amanda_pics_2.jpg' %}" alt="" style="with:100%;">
+			</div>
+
+			 <div class="item 3">
+			  <img src="{% static 'images/amanda_pics_3.jpg' %}" alt="" style="with:100%;">
+			</div>
+		</div>
+
+		   <!-- Left and right controls -->
+		 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		   <span class="glyphicon glyphicon-chevron-left"></span>
+		   <span class="sr-only">Previous</span>
+		 </a>
+
+		 <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		   <span class="glyphicon glyphicon-chevron-right"></span>
+		   <span class="sr-only">Next</span>
+		 </a>
+
+		 <script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+
+    // Enable Carousel Indicators
+    $(".item active").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item 2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item 3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+   $(".item 4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+    $(".item 5").click(function(){
+        $("#myCarousel").carousel(4);
+    });
+
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+{% endblock %}
