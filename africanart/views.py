@@ -8,3 +8,7 @@ def africanart(request):
     return render(request, 'africanart/africanart.html',)
 
 
+def picture_gallery(request):
+    return render(request, 'africanart/picture_gallery.html',)
+
+
